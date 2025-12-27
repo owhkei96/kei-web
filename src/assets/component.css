@@ -1,0 +1,24 @@
+@import 'tailwindcss';
+
+.p-card.cz-card {
+  @apply w-full bg-gray-800;
+}
+.cz-title {
+  @apply font-extrabold block;
+}
+.cz-content {
+  @apply font-mono block;
+}
+.cz-example {
+  @apply text-sm font-extralight font-mono w-full;
+}
+.cz-example-nosize {
+  @apply font-extralight font-mono w-full;
+}
+.cz-box {
+  @apply flex h-30 bg-cyan-200 rounded-sm;
+}
+
+.cz-box-vertical {
+  @apply flex flex-col bg-cyan-200 rounded-sm;
+}

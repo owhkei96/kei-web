@@ -1,0 +1,63 @@
+@theme {
+  --font-roboto: 'Roboto', sans-serif;
+}
+
+/* Global typography */
+@layer base {
+  label {
+    @apply block font-roboto text-base;
+    font-weight: 400;
+    color: var(--cz-content);
+  }
+  html,
+  body,
+  #app {
+    background-color: var(--cz-surface-ground);
+  }
+}
+
+.cz-italic {
+  @apply block font-roboto text-sm;
+  font-weight: 400;
+}
+.cz-title {
+  @apply text-2xl;
+  font-weight: 600;
+}
+.cz-subtitle {
+  @apply text-lg;
+  font-weight: 600;
+}
+.cz-highlight {
+  @apply text-base;
+  font-weight: 400;
+  color: var(--cz-title);
+}
+.cz-hint {
+  @apply text-sm;
+  font-weight: 300;
+  color: var(--cz-hint);
+}
+.cz-hint-coding {
+  @apply text-sm;
+  font-weight: 300;
+  color: var(--cz-coding);
+}
+.cz-coding {
+  color: var(--cz-coding);
+}
+.cz-bottom-divider {
+  @apply border-b;
+  border-color: var(--cz-divider);
+}
+.cz-image-border {
+  @apply border-3;
+  border-color: var(--cz-divider);
+}
+
+.cz-photo-size {
+  @apply w-[130px] h-[130px];
+}
+.cz-padding-y {
+  @apply py-10;
+}

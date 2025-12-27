@@ -1,0 +1,86 @@
+/* FROM LEFT */
+.slide-left-enter-active,
+.slide-left-leave-active,
+.slide-left-appear-active {
+  transition: all 1000ms ease;
+}
+
+.slide-left-enter-from,
+.slide-left-appear-from {
+  opacity: 0;
+  transform: translateX(-2.5rem);
+}
+
+.slide-left-enter-to,
+.slide-left-appear-to {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-left-leave-from {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-left-leave-to {
+  opacity: 0;
+  transform: translateX(2.5rem);
+}
+
+/* FROM RIGHT */
+.slide-right-enter-active,
+.slide-right-leave-active,
+.slide-right-appear-active {
+  transition: all 1000ms ease;
+}
+
+.slide-right-enter-from,
+.slide-right-appear-from {
+  opacity: 0;
+  transform: translateX(2.5rem);
+}
+
+.slide-right-enter-to,
+.slide-right-appear-to {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-right-leave-from {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-right-leave-to {
+  opacity: 0;
+  transform: translateX(-2.5rem);
+}
+
+/* ===== FADE ONLY (NO TRANSLATION) ===== */
+.fade-only-enter-active,
+.fade-only-leave-active,
+.fade-only-appear-active {
+  transition: opacity 1500ms ease;
+}
+
+.fade-only-enter-from,
+.fade-only-appear-from {
+  opacity: 0;
+}
+
+.fade-only-enter-to,
+.fade-only-appear-to {
+  opacity: 1;
+}
+
+.fade-only-leave-from {
+  opacity: 1;
+}
+
+.fade-only-leave-to {
+  opacity: 0;
+}
+
+.hover-enlarge {
+  @apply transition-transform duration-300 hover:scale-102 origin-center;
+}

@@ -1,0 +1,11 @@
+/* Test PrimeVue theme prefix override */
+:root {
+  /* Override PrimeVue tokens using your prefix */
+  --cz-primary-color: #ff0066 !important; /* Hot pink */
+  --cz-primary-color-hover: #ff3385 !important;
+  --cz-primary-color-active: #cc0052 !important;
+
+  --cz-border-radius: 12px !important; /* Visible rounded corners */
+  --cz-button-padding-y: 12px !important; /* Taller buttons */
+  --cz-button-padding-x: 20px !important;
+}
