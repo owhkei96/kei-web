@@ -286,5 +286,4 @@ app.use(PrimeVue, {
 })
 
 import '@/assets/base.css'
-
 app.mount('#app')
