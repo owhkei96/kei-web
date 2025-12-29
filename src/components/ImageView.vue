@@ -11,7 +11,7 @@ defineProps({
 const ThumbnailFileName = (fileName) => {
   const dotIndex = fileName.lastIndexOf(".");
   if (dotIndex === -1) return fileName; // no extension case
-  console.log(fileName.slice(0, dotIndex) + "_thumbnail" + fileName.slice(dotIndex));
+  //console.log(fileName.slice(0, dotIndex) + "_thumbnail" + fileName.slice(dotIndex));
 
   return fileName.slice(0, dotIndex) + "_thumbnail" + fileName.slice(dotIndex);
 };
