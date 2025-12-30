@@ -1,17 +1,17 @@
 <script setup>
-import Rating from "primevue/rating";
-import { computed } from "vue";
-import score_on from "../../images/score_blue.svg";
-import score_off from "../../images/score_blue_light.svg";
+import Rating from 'primevue/rating'
+import { computed } from 'vue'
+import score_on from '../../images/score_blue.svg'
+import score_off from '../../images/score_blue_light.svg'
 
 const props = defineProps({
   language: {
     type: Object,
     required: true,
   },
-});
+})
 
-const languageEntries = computed(() => Object.entries(props.language));
+const languageEntries = computed(() => Object.entries(props.language))
 </script>
 
 <template>
@@ -32,22 +32,22 @@ const languageEntries = computed(() => Object.entries(props.language));
               :pt="{ root: { class: 'inline-flex w-auto' } }"
             >
               <template #onicon>
-                <img :src="score_on" width="38" height="38" class="shrink-0" />
+                <img :src="score_on" height="auto" class="star-size shrink-0" />
               </template>
               <template #officon>
-                <img :src="score_off" width="38" height="38" class="shrink-0" />
+                <img :src="score_off" height="auto" class="star-size shrink-0" />
               </template>
             </Rating>
           </div>
 
           <!-- Reading (left aligned with stars) -->
           <label class="cz-hint-coding text-left">
-            {{ $t("reading") }}: {{ level.reading ?? "N/A" }}
+            {{ $t('reading') }}: {{ level.reading ?? 'N/A' }}
           </label>
 
           <!-- Listening (right aligned with stars) -->
           <label class="cz-hint-coding text-right">
-            {{ $t("listening") }}: {{ level.listening ?? "N/A" }}
+            {{ $t('listening') }}: {{ level.listening ?? 'N/A' }}
           </label>
         </div>
       </div>
@@ -55,4 +55,14 @@ const languageEntries = computed(() => Object.entries(props.language));
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.star-size {
+  width: 38px; /* default */
+}
+
+@media (max-width: 385px) {
+  .star-size {
+    width: 28px; /* override for small screens */
+  }
+}
+</style>
