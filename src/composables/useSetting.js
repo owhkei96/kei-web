@@ -61,7 +61,7 @@ export function useSetting() {
       icon: 'pi pi-download',
       command: () => {
         const url =
-          'https://drive.usercontent.google.com/download?id=1GHlFrlIEx8FKOWMD0jcRlz16Xfy5kqYw&export=download' // your link
+          'https://drive.usercontent.google.com/download?id=1s2n1z2Vw4Arc60irvTHpVoStOisBvG7Y&export=download' // your link
         const a = document.createElement('a')
         a.href = url
         a.download = '' // force download
