@@ -11,11 +11,17 @@ export const useUserData = defineStore('userdata', () => {
     try {
       const res = await axios.get(
         'https://693ea10912c964ee6b6de8de.mockapi.io/api/v1/getresume/0502',
+        { timeout: 5000 },
       )
       data.value = res.data
     } catch (error) {
-      errorMessage.value = ['API 发生错误', error.message]
-      console.log('Error 0x001:', errorMessage.value)
+      if (error.code === 'ECONNABORTED') {
+        errorMessage.value = ['API 请求超时', '使用本地数据']
+        getLocalResume()
+      } else {
+        errorMessage.value = ['API 发生错误', error.message]
+        console.log('Error 0x001:', errorMessage.value)
+      }
     }
   }
 

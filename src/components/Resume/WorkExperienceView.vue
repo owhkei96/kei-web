@@ -1,21 +1,21 @@
 <script setup>
-import { useI18n } from 'vue-i18n'
-import Timeline from 'primevue/timeline'
-import Chip from 'primevue/chip'
-import Image from 'primevue/image'
+import { useI18n } from "vue-i18n";
+import Timeline from "primevue/timeline";
+import Chip from "primevue/chip";
+import Image from "primevue/image";
 
-const { t } = useI18n()
+const { t } = useI18n();
 
 function formatMonthYear(dateStr) {
-  const date = new Date(dateStr)
+  const date = new Date(dateStr);
 
   const monthKey = date
-    .toLocaleString('en-US', { month: 'short' }) // Jan, Feb, Jul
-    .slice(0, 3)
+    .toLocaleString("en-US", { month: "short" }) // Jan, Feb, Jul
+    .slice(0, 3);
 
-  const year = date.getFullYear()
+  const year = date.getFullYear();
 
-  return `${t(`${monthKey}`)} ${year}`
+  return `${t(`${monthKey}`)} ${year}`;
 }
 
 defineProps({
@@ -23,7 +23,7 @@ defineProps({
     type: Array,
     required: true,
   },
-})
+});
 </script>
 
 <template>
@@ -42,8 +42,8 @@ defineProps({
             </label>
             <label class="cz-hint mt-0.5">
               {{ formatMonthYear(item.from) }} -
-              {{ item.years > 0 ? item.years + $t('years') : '' }}
-              {{ item.months > 0 ? item.months + $t('months') : '' }}
+              {{ item.years > 0 ? item.years + $t("years") : "" }}
+              {{ item.months > 0 ? item.months + $t("months") : "" }}
             </label>
           </div>
         </div>
@@ -54,7 +54,7 @@ defineProps({
             :key="item"
             class="relative pl-4 before:absolute before:left-0 before:content-['-']"
           >
-            <label>{{ item }}</label>
+            <label>{{ $t(item) }}</label>
           </li>
         </ul>
         <div class="space-x-2 space-y-2 mt-2">

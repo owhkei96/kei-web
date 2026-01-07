@@ -1,29 +1,29 @@
 <script setup>
-import { onMounted } from 'vue'
-import SpeedDial from 'primevue/speeddial'
-import ResumeView from './views/ResumeView.vue'
-import LoadingView from './components/LoadingView.vue'
-import ErrorView from './components/ErrorView.vue'
-import { useUserData } from './stores/userData'
-import { useSleep } from './composables/useSleep'
-import { useSetting } from './composables/useSetting'
-import { storeToRefs } from 'pinia'
+import { onMounted } from "vue";
+import SpeedDial from "primevue/speeddial";
+import ResumeView from "./views/ResumeView.vue";
+import LoadingView from "./components/LoadingView.vue";
+import ErrorView from "./components/ErrorView.vue";
+import { useUserData } from "./stores/userData";
+import { useSleep } from "./composables/useSleep";
+import { useSetting } from "./composables/useSetting";
+import { storeToRefs } from "pinia";
 
-const store = useUserData()
-const { data, errorMessage } = storeToRefs(store)
-const { getResume, getLocalResume } = store
+const store = useUserData();
+const { data, errorMessage } = storeToRefs(store);
+const { getResume, getLocalResume } = store;
 
-const { items } = useSetting()
+const { items } = useSetting();
 
 onMounted(async () => {
   // get resume data
-  await useSleep(Math.floor(Math.random() * 1000) + 500)
-  await getResume()
+  await useSleep(Math.floor(Math.random() * 1000) + 500);
+  await getResume();
   if (data.value.length === 0) {
-    await useSleep(5000)
-    getLocalResume()
+    await useSleep(5000);
+    getLocalResume();
   }
-})
+});
 </script>
 
 <template>
@@ -37,7 +37,7 @@ onMounted(async () => {
         <ErrorView v-else :msg="errorMessage" />
       </div>
 
-      <div v-else class="flex flex-col w-full lg:w-10/12 xl:w-8/12">
+      <div v-else class="flex flex-col w-full lg:w-10/12 xl:w-9/12">
         <ResumeView :apiData="data" />
       </div>
     </div>

@@ -9,6 +9,7 @@ import ContactView from "../components/Resume/ContactView.vue";
 import EducationView from "../components/Resume/EducationView.vue";
 import WorkExperienceView from "../components/Resume/WorkExperienceView.vue";
 import SkillView from "../components/Resume/SkillView.vue";
+import OtherView from "../components/Resume/OtherView.vue";
 import LanguageView from "../components/Resume/LanguageView.vue";
 
 const chibiImages = [
@@ -47,7 +48,7 @@ onMounted(() => {
     <Transition name="fade-only">
       <div
         v-if="show"
-        class="grid grid-cols-[auto_1fr_90px] md:grid-cols-[auto_1fr_100px] gap-x-3 items-center mx-2"
+        class="grid grid-cols-[auto_1fr_90px] md:grid-cols-[auto_1fr_100px] [@media(max-width:385px)]:grid-cols-[auto_1fr] gap-x-3 items-center mx-2"
       >
         <ImageView
           :photo="getRandomPhoto()"
@@ -55,10 +56,18 @@ onMounted(() => {
         />
         <div>
           <label class="cz-title">{{ props.apiData?.name }}</label>
-          <label class="cz-highlight">{{ props.apiData?.title }}</label>
+          <label class="cz-highlight">{{ $t(props.apiData?.title) }}</label>
+          <label class="cz-hint-coding cz-print-only">
+            <a :href="props.apiData?.link"> {{ props.apiData?.link }} </a>
+          </label>
         </div>
 
-        <Image class="self-end hover-enlarge" :src="chibiSrc" alt="chibi" preview>
+        <Image
+          class="self-end hover-enlarge [@media(max-width:385px)]:hidden!"
+          :src="chibiSrc"
+          alt="chibi"
+          preview
+        >
           <template #previewicon>
             <i class="pi pi-arrow-up-right-and-arrow-down-left-from-center" />
           </template>
@@ -67,7 +76,7 @@ onMounted(() => {
     </Transition>
 
     <div
-      class="grid grid-cols-1 gap-y-3 [@media(min-width:900px)]:grid-cols-[350px_1fr] [@media(min-width:900px)]:gap-x-3"
+      class="grid grid-cols-1 gap-y-3 [@media(min-width:900px)]:grid-cols-[360px_1fr] [@media(min-width:900px)]:gap-x-3"
     >
       <Transition name="slide-left">
         <div
@@ -95,6 +104,16 @@ onMounted(() => {
                 :advanced="props.apiData?.skill.advanced"
                 :foundation="props.apiData?.skill.foundation"
                 :familiar="props.apiData?.skill.familiar"
+              />
+            </template>
+          </Card>
+
+          <!-- Other -->
+          <Card class="flex-auto hover-enlarge">
+            <template #content>
+              <OtherView
+                :tools="props.apiData?.skill.tools"
+                :ai="props.apiData?.skill.ai"
               />
             </template>
           </Card>
@@ -133,8 +152,8 @@ onMounted(() => {
             <template #content>
               <label class="cz-subtitle mb-2">{{ $t("description") }}</label>
               <div class="flex flex-col space-y-2 text-start">
-                <label v-for="item in props.apiData?.description" :key="item"
-                  >{{ item }}
+                <label v-for="item in props.apiData?.description" :key="item">
+                  {{ $t(item) }}
                 </label>
 
                 <div class="flex flex-row justify-center items-center space-x-3">
@@ -154,11 +173,20 @@ onMounted(() => {
             </template>
           </Card>
 
-          <!-- Education -->
+          <!-- Technical Skill -->
           <Card class="flex-auto hover-enlarge">
             <template #content>
-              <label class="cz-subtitle mb-5">{{ $t("education") }}</label>
-              <EducationView :data="props.apiData?.education" />
+              <label class="cz-subtitle mb-2">{{ $t("technical_skill") }}</label>
+              <div
+                class="grid grid-cols-[auto_1fr] space-y-2 text-start gap-x-2"
+                v-for="item in props.apiData?.technical_skill"
+                :key="item"
+              >
+                <label class="text-right cz-highlight">> {{ $t(item) }}: </label
+                ><label>
+                  {{ $t(`msg_${item}`) }}
+                </label>
+              </div>
             </template>
           </Card>
 
@@ -167,6 +195,14 @@ onMounted(() => {
             <template #content>
               <label class="cz-subtitle mb-5">{{ $t("work") }}</label>
               <WorkExperienceView :data="props.apiData?.work" />
+            </template>
+          </Card>
+
+          <!-- Education -->
+          <Card class="flex-auto hover-enlarge">
+            <template #content>
+              <label class="cz-subtitle mb-5">{{ $t("education") }}</label>
+              <EducationView :data="props.apiData?.education" />
             </template>
           </Card>
         </div>

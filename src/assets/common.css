@@ -66,3 +66,6 @@
 .cz-padding-y {
   @apply py-0;
 }
+.cz-print-only {
+  @apply hidden;
+}

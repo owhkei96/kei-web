@@ -10,20 +10,16 @@ import { useI18n } from "vue-i18n";
 const { t } = useI18n();
 
 const props = defineProps({
-  advanced: {
+  tools: {
     type: Array,
     required: true,
   },
-  foundation: {
-    type: Array,
-    required: true,
-  },
-  familiar: {
+  ai: {
     type: Array,
     required: true,
   },
 });
-const selected = ref(["advanced", "foundation", "familiar"]);
+const selected = ref(["tools", "ai"]);
 
 const itemGroups = Object.entries(props);
 

@@ -61,3 +61,6 @@
 .cz-padding-y {
   @apply py-10;
 }
+.cz-print-only {
+  @apply block;
+}

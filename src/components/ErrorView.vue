@@ -14,7 +14,7 @@ onMounted(() => {
 
 defineProps({
   msg: {
-    type: String,
+    type: Array,
     required: true,
   },
 });
