@@ -80,7 +80,7 @@ const i18n = createI18n({
       msg_learning_ability:
         'Learns new frameworks by understanding core concepts before practical adoption',
       msg_ai_assisted_development:
-        'Uses AI tools to support development, debugging, and deployment workflows',
+        'Uses AI tools (ChatGPT, DeepSeek, Copilot, Gemini) to support development, debugging, and deployment workflows',
       msg_unlockable_potential: 'Current skill set unlocked — next levels available upon hiring',
 
       mobile_app_developer: 'Mobile App Developer',
@@ -162,7 +162,8 @@ const i18n = createI18n({
       msg_research_and_curiosity: '以研究为导向, 关注事物运作原理',
       msg_debugging: '能够以结构化方式分析并排查问题',
       msg_learning_ability: '通过理解核心概念来学习并实际采用新框架',
-      msg_ai_assisted_development: '使用 AI 工具辅助开发、除错与部署流程',
+      msg_ai_assisted_development:
+        '使用 AI 工具 (ChatGPT, DeepSeek, Copilot, Gemini) 辅助开发、除错与部署流程',
       msg_unlockable_potential: '当前技能已解锁, 入职即可开启下一阶段',
 
       mobile_app_developer: '移动应用开发工程师',
@@ -238,7 +239,8 @@ const i18n = createI18n({
       msg_research_and_curiosity: '以研究為導向, 關注事物運作原理',
       msg_debugging: '能以結構化方式分析並排查問題',
       msg_learning_ability: '透過理解核心概念來學習並實際採用新框架',
-      msg_ai_assisted_development: '使用 AI 工具輔助開發、除錯與部署流程',
+      msg_ai_assisted_development:
+        '使用 AI 工具 (ChatGPT, DeepSeek, Copilot, Gemini) 輔助開發、除錯與部署流程',
       msg_unlockable_potential: '目前技能已解鎖, 入職即可開啟下一階段',
 
       mobile_app_developer: '行動應用開發工程師',
