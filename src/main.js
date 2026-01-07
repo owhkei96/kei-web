@@ -42,9 +42,7 @@ const i18n = createI18n({
       msg_familiar: 'Basic understanding, requires refresh before active use',
 
       tools: 'Tools',
-      ai: 'AI',
       msg_tools: 'Tools used for development and deployment',
-      msg_ai: 'AI tools for productivity and code quality',
 
       reading: 'reading',
       listening: 'listening',
@@ -74,12 +72,15 @@ const i18n = createI18n({
       research_and_curiosity: 'Research & Curiosity',
       debugging: 'Debugging',
       learning_ability: 'Learning Ability',
+      ai_assisted_development: 'AI-Assisted Development',
       unlockable_potential: 'Unlockable Potential',
       msg_research_and_curiosity:
         'Research-oriented mindset with interest in understanding how things work',
       msg_debugging: 'Able to analyze issues and debug problems in a structured manner', // reproduce → observe → narrow down → fix → verify
       msg_learning_ability:
         'Learns new frameworks by understanding core concepts before practical adoption',
+      msg_ai_assisted_development:
+        'Uses AI tools to support development, debugging, and deployment workflows',
       msg_unlockable_potential: 'Current skill set unlocked — next levels available upon hiring',
 
       mobile_app_developer: 'Mobile App Developer',
@@ -124,9 +125,7 @@ const i18n = createI18n({
       msg_familiar: '基础理解, 需复习后才能再次使用',
 
       tools: '工具',
-      ai: 'AI',
       msg_tools: '用于开发与部署的工具',
-      msg_ai: '用于提升效率与代码质量的 AI 工具',
 
       reading: '阅读',
       listening: '听力',
@@ -156,11 +155,14 @@ const i18n = createI18n({
       research_and_curiosity: '研究与好奇心',
       debugging: '问题排查',
       learning_ability: '学习能力',
+
+      ai_assisted_development: 'AI 辅助开发',
       unlockable_potential: '可解锁潜力',
 
       msg_research_and_curiosity: '以研究为导向, 关注事物运作原理',
       msg_debugging: '能够以结构化方式分析并排查问题',
       msg_learning_ability: '通过理解核心概念来学习并实际采用新框架',
+      msg_ai_assisted_development: '使用 AI 工具辅助开发、除错与部署流程',
       msg_unlockable_potential: '当前技能已解锁, 入职即可开启下一阶段',
 
       mobile_app_developer: '移动应用开发工程师',
@@ -201,9 +203,7 @@ const i18n = createI18n({
       msg_familiar: '基礎理解, 需複習後才能再次使用',
 
       tools: '工具',
-      ai: 'AI',
       msg_tools: '用於開發與部署的工具',
-      msg_ai: '用於提升效率與程式碼品質的 AI 工具',
 
       reading: '閱讀',
       listening: '聽力',
@@ -232,11 +232,13 @@ const i18n = createI18n({
       research_and_curiosity: '研究與好奇心',
       debugging: '問題排查',
       learning_ability: '學習能力',
+      ai_assisted_development: 'AI 輔助開發',
       unlockable_potential: '可解鎖潛力',
 
       msg_research_and_curiosity: '以研究為導向, 關注事物運作原理',
       msg_debugging: '能以結構化方式分析並排查問題',
       msg_learning_ability: '透過理解核心概念來學習並實際採用新框架',
+      msg_ai_assisted_development: '使用 AI 工具輔助開發、除錯與部署流程',
       msg_unlockable_potential: '目前技能已解鎖, 入職即可開啟下一階段',
 
       mobile_app_developer: '行動應用開發工程師',

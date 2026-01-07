@@ -37,7 +37,7 @@ onMounted(async () => {
         <ErrorView v-else :msg="errorMessage" />
       </div>
 
-      <div v-else class="flex flex-col w-full lg:w-10/12 xl:w-9/12">
+      <div v-else class="flex flex-col w-full lg:w-10/12 xl:w-8/12">
         <ResumeView :apiData="data" />
       </div>
     </div>

@@ -14,12 +14,8 @@ const props = defineProps({
     type: Array,
     required: true,
   },
-  ai: {
-    type: Array,
-    required: true,
-  },
 });
-const selected = ref(["tools", "ai"]);
+const selected = ref(["tools"]);
 
 const itemGroups = Object.entries(props);
 

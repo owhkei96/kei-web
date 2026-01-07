@@ -111,10 +111,7 @@ onMounted(() => {
           <!-- Other -->
           <Card class="flex-auto hover-enlarge">
             <template #content>
-              <OtherView
-                :tools="props.apiData?.skill.tools"
-                :ai="props.apiData?.skill.ai"
-              />
+              <OtherView :tools="props.apiData?.skill.tools" />
             </template>
           </Card>
 
@@ -177,15 +174,17 @@ onMounted(() => {
           <Card class="flex-auto hover-enlarge">
             <template #content>
               <label class="cz-subtitle mb-2">{{ $t("technical_skill") }}</label>
-              <div
-                class="grid grid-cols-[auto_1fr] space-y-2 text-start gap-x-2"
-                v-for="item in props.apiData?.technical_skill"
-                :key="item"
-              >
-                <label class="text-right cz-highlight">> {{ $t(item) }}: </label
-                ><label>
-                  {{ $t(`msg_${item}`) }}
-                </label>
+              <div class="flex flex-col gap-y-2">
+                <div
+                  v-for="item in props.apiData?.technical_skill"
+                  :key="item"
+                  class="flex flex-row gap-x-2"
+                >
+                  <label>
+                    <span class="cz-highlight">{{ $t(item) }}:</span>
+                    {{ $t(`msg_${item}`) }}
+                  </label>
+                </div>
               </div>
             </template>
           </Card>
