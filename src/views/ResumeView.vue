@@ -1,7 +1,7 @@
 <script setup>
 import Card from "primevue/card";
 import Image from "primevue/image";
-import { onMounted, ref } from "vue";
+import { onMounted, ref, computed } from "vue";
 import { useImage } from "../composables/useImage";
 
 import ImageView from "../components/ImageView.vue";
@@ -22,16 +22,19 @@ const chibiSrc = ref("");
 const show = ref(false);
 
 const props = defineProps({
-  apiData: Object,
+  apiData: {
+    type: Object,
+    required: true,
+  },
 });
 
-const getRandomPhoto = () => {
+const randomPhoto = computed(() => {
   const list = props.apiData?.photos;
   if (!list || list.length === 0) return "default.jpg"; // no data fallback
 
   const index = Math.floor(Math.random() * list.length);
   return list[index] || "default.jpg"; // if random is empty/undefined
-};
+});
 
 onMounted(() => {
   const index = Math.floor(Math.random() * chibiImages.length);
@@ -51,7 +54,7 @@ onMounted(() => {
         class="grid grid-cols-[auto_1fr_90px] md:grid-cols-[auto_1fr_100px] [@media(max-width:385px)]:grid-cols-[auto_1fr] gap-x-3 items-center mx-2"
       >
         <ImageView
-          :photo="getRandomPhoto()"
+          :photo="randomPhoto"
           class="border-2 border-(--cz-title) hover-enlarge"
         />
         <div>
