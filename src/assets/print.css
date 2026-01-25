@@ -69,3 +69,6 @@
 .cz-print-only {
   @apply block;
 }
+.cz-print-hide {
+  @apply hidden!;
+}

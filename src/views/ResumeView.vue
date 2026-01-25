@@ -2,11 +2,11 @@
 import { useI18n } from "vue-i18n";
 import Card from "primevue/card";
 import Image from "primevue/image";
-import { onMounted, ref, computed } from "vue";
+import { onMounted, ref } from "vue";
 import { useImage } from "../composables/useImage";
 
 import ImageView from "../components/ImageView.vue";
-import ContactView from "../components/Resume/ContactView.vue";
+import InfoContactView from "../components/Resume/InfoContactView.vue";
 import EducationView from "../components/Resume/EducationView.vue";
 import WorkExperienceView from "../components/Resume/WorkExperienceView.vue";
 import SkillView from "../components/Resume/SkillView.vue";
@@ -32,14 +32,6 @@ const props = defineProps({
   },
 });
 
-const randomPhoto = computed(() => {
-  const list = props.apiData?.photos;
-  if (!list || list.length === 0) return "default.jpg"; // no data fallback
-
-  const index = Math.floor(Math.random() * list.length);
-  return list[index] || "default.jpg"; // if random is empty/undefined
-});
-
 onMounted(() => {
   const index = Math.floor(Math.random() * chibiImages.length);
   chibiSrc.value = chibiImages[index];
@@ -58,9 +50,21 @@ onMounted(() => {
         class="grid grid-cols-[auto_1fr_90px] md:grid-cols-[auto_1fr_100px] [@media(max-width:385px)]:grid-cols-[auto_1fr] gap-x-3 items-center mx-2"
       >
         <ImageView
-          :photo="randomPhoto"
-          class="border-2 border-(--cz-title) hover-enlarge"
+          :photo="props.apiData?.photo"
+          class="border-2 border-(--cz-title) hover-enlarge cz-print-hide"
         />
+
+        <Image
+          class="self-end hover-enlarge w-[90px] h-[90px] md:w-[100px] md:h-[100px] cz-print-only [@media(max-width:385px)]:hidden!"
+          :src="chibiSrc"
+          alt="chibi"
+          preview
+        >
+          <template #previewicon>
+            <i class="pi pi-arrow-up-right-and-arrow-down-left-from-center" />
+          </template>
+        </Image>
+
         <div>
           <label class="cz-title">{{ props.apiData?.name }}</label>
           <label class="cz-highlight">{{ $t(props.apiData?.title) }}</label>
@@ -70,7 +74,7 @@ onMounted(() => {
         </div>
 
         <Image
-          class="self-end hover-enlarge [@media(max-width:385px)]:hidden!"
+          class="self-end hover-enlarge w-[90px] h-[90px] md:w-[100px] md:h-[100px] cz-print-hide [@media(max-width:385px)]:hidden!"
           :src="chibiSrc"
           alt="chibi"
           preview
@@ -90,12 +94,15 @@ onMounted(() => {
           v-if="show"
           class="self-start flex flex-col gap-y-3 order-2 [@media(min-width:900px)]:order-1"
         >
-          <!-- Contact -->
+          <!-- Info & Contact -->
           <div class="hidden [@media(min-width:900px)]:block">
             <Card class="flex-auto hover-enlarge">
               <template #content>
-                <label class="cz-subtitle">{{ $t("contact") }}</label>
-                <ContactView
+                <label class="cz-subtitle">{{ $t("info_and_contact") }}</label>
+                <InfoContactView
+                  :born="props.apiData?.born"
+                  :city="props.apiData?.city"
+                  :country="props.apiData?.country"
                   :email="props.apiData?.email"
                   :contact="props.apiData?.contact"
                   :url="props.apiData?.url"

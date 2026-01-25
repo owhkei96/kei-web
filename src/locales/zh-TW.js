@@ -1,6 +1,6 @@
 export default {
   area_of_expertise: '專業領域',
-  contact: '聯繫',
+  info_and_contact: '資訊 & 聯絡',
   description: '簡介',
 
   technical_skill: '技術技能',
@@ -10,6 +10,10 @@ export default {
   education: '教育背景',
   promotion: '晉升',
   achievement: '成就',
+
+  born_in: '出生於',
+  selangor: '雪蘭莪',
+  malaysia: '馬來西亞',
 
   hokkien: '福建話',
   english: '英語',

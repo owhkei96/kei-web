@@ -1,6 +1,6 @@
 export default {
   area_of_expertise: 'Area of Expertise',
-  contact: 'Contact',
+  info_and_contact: 'Info & Contact',
   description: 'Description',
 
   technical_skill: 'Technical Skill',
@@ -10,6 +10,10 @@ export default {
   education: 'Education',
   promotion: 'Promotion',
   achievement: 'Achievement',
+
+  born_in: 'Born in',
+  selangor: 'Selangor',
+  malaysia: 'Malaysia',
 
   hokkien: 'Hokkien',
   english: 'English',

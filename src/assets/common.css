@@ -72,5 +72,8 @@
   @apply py-0;
 }
 .cz-print-only {
-  @apply hidden;
+  @apply hidden!;
+}
+.cz-print-hide {
+  @apply block;
 }
