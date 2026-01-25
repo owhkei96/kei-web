@@ -64,8 +64,11 @@ export function useSetting() {
           'https://drive.usercontent.google.com/download?id=1s2n1z2Vw4Arc60irvTHpVoStOisBvG7Y&export=download' // your link
         const a = document.createElement('a')
         a.href = url
+        a.target = '_blank'
         a.download = '' // force download
+        document.body.appendChild(a) // required for Firefox
         a.click()
+        document.body.removeChild(a)
       },
     },
   ])

@@ -1,4 +1,5 @@
 <script setup>
+import { useI18n } from "vue-i18n";
 import Card from "primevue/card";
 import Image from "primevue/image";
 import { onMounted, ref, computed } from "vue";
@@ -10,7 +11,10 @@ import EducationView from "../components/Resume/EducationView.vue";
 import WorkExperienceView from "../components/Resume/WorkExperienceView.vue";
 import SkillView from "../components/Resume/SkillView.vue";
 import OtherView from "../components/Resume/OtherView.vue";
+import AchievementView from "../components/Resume/AchievementView.vue";
 import LanguageView from "../components/Resume/LanguageView.vue";
+
+const { t } = useI18n();
 
 const chibiImages = [
   "/chibi/chibi1_struggling.png",
@@ -121,8 +125,16 @@ onMounted(() => {
           <!-- Language -->
           <Card class="flex-auto hover-enlarge">
             <template #content>
-              <label class="cz-subtitle mb-5">{{ $t("language") }}</label>
+              <label class="cz-subtitle">{{ $t("language") }}</label>
               <LanguageView :language="props.apiData?.language" />
+            </template>
+          </Card>
+
+          <!-- Achievement -->
+          <Card class="flex-auto hover-enlarge">
+            <template #content>
+              <label class="cz-subtitle">{{ $t("achievement") }}</label>
+              <AchievementView :data="props.apiData?.achievement" />
             </template>
           </Card>
         </div>
@@ -153,7 +165,11 @@ onMounted(() => {
               <label class="cz-subtitle mb-2">{{ $t("description") }}</label>
               <div class="flex flex-col space-y-2 text-start">
                 <label v-for="item in props.apiData?.description" :key="item">
-                  {{ $t(item) }}
+                  <i18n-t :keypath="item" scope="global">
+                    <template #dotnet_maui>
+                      <strong class="text-(--cz-title)">{{ t("dotnet_maui") }}</strong>
+                    </template>
+                  </i18n-t>
                 </label>
 
                 <div class="flex flex-row justify-center items-center space-x-3">

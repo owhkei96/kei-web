@@ -38,6 +38,11 @@
   font-weight: 400;
   color: var(--cz-title);
 }
+.cz-highlight-small {
+  @apply text-xs;
+  font-weight: 400;
+  color: var(--cz-title);
+}
 .cz-hint {
   @apply text-xs;
   font-weight: 300;

@@ -22,7 +22,7 @@ defineProps({
 
 <template>
   <div
-    class="grid max-lg:grid-rows-[auto_auto_auto] lg:grid-cols-[1fr_auto_1fr] items-center gap-2 p-10 bg-(--cz-box) rounded-lg"
+    class="grid max-lg:grid-rows-[auto_auto_auto] lg:grid-cols-[1fr_auto_1fr] items-center gap-2 p-10 bg-(--cz-box) rounded-lg self-center"
   >
     <Image class="flex justify-center" :src="chibiSrc" alt="chibi" width="200" />
     <Divider class="hidden! lg:block!" layout="vertical" />

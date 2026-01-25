@@ -1,1 +1,97 @@
-{"id":"0502","photos":["photo1.jpg"],"name":"Wil Qing Gew","title":"mobile_app_developer","link":"https://wilqing.netlify.app/","email":"wq_5296@hotmail.com","contact":"(+60)14-9358748","description":["description_1","description_2"],"url":{"LinkedIn":"wilqing"},"education":[{"icon":"apu.jpg","title":"BSC (Hons) in Software Engineering","institution":"Asia Pacific University (APU)","from":2016,"to":2018,"cgpa":3.67},{"icon":"apu.jpg","title":"Diploma in Software Engineering","institution":"Asia Pacific University (APU)","from":2014,"to":2016,"cgpa":3.58}],"work":[{"icon":"timetec.png","company":"TimeTec Cloud Sdn Bhd","position":"Mobile Solution Engineering (AI)","location":"Cyberjaya(Hybrid) > Puchong(Hybrid)","years":6,"months":3,"from":"2019-07-01","responsibility":["timetec_1","timetec_2","timetec_3","timetec_4"],"keyword":["xamarin","maui","c#",".net","mobile","cross platform","android","ios"]},{"icon":"freelance.jpg","company":"Freelance","position":"Web Developer","location":"Home","years":0,"months":6,"from":"2018-08-01","responsibility":["freelance_1","freelance_2"],"keyword":["html","css","javascript","bootstrap"]}],"expertise":["dotnet","csharp","xaml"],"skill":{"advanced":["xamarin","maui","c#",".net"],"foundation":["html","vue3","primevue4","tailwind4","pinia"],"familiar":["java","swift","css","js","etc"],"tools":["visual studio","vs code","xcode","github/gitlab","postman"],"ai":["chatgpt","copilot","deepseek","gemini"]},"language":{"chinese":{"score":4,"reading":4.5,"listening":4},"english":{"score":3,"reading":3.5,"listening":3},"malay":{"score":2,"reading":2,"listening":2},"hokkien":{"score":4,"reading":null,"listening":4},"cantonese":{"score":2,"reading":2,"listening":3}},"technical_skill":["research_and_curiosity","debugging","learning_ability","unlockable_potential"]}
+{
+  "id": "0502",
+  "photos": ["photo1.jpg"],
+  "name": "Wil Qing Gew",
+  "title": "mobile_app_developer",
+  "link": "https://wilqing.netlify.app/",
+  "email": "wq_5296@hotmail.com",
+  "contact": "(+60)14-9358748",
+  "description": ["description_1", "description_2"],
+  "url": { "LinkedIn": "wilqing" },
+  "education": [
+    {
+      "icon": "apu.jpg",
+      "title": "BSC (Hons) in Software Engineering",
+      "institution": "Asia Pacific University (APU)",
+      "from": 2016,
+      "to": 2018,
+      "cgpa": 3.67
+    },
+    {
+      "icon": "apu.jpg",
+      "title": "Diploma in Software Engineering",
+      "institution": "Asia Pacific University (APU)",
+      "from": 2014,
+      "to": 2016,
+      "cgpa": 3.58
+    }
+  ],
+  "work": [
+    {
+      "icon": "timetec.png",
+      "company": "TimeTec Cloud Sdn Bhd",
+      "description": "description_timetec",
+      "position": "Mobile Solution Engineering (AI) [Architect]",
+      "location": "Cyberjaya(Hybrid) > Puchong(Hybrid)",
+      "years": 6,
+      "months": 3,
+      "from": "2019-07-01",
+      "responsibility": [
+        "timetec_1",
+        "timetec_2",
+        "timetec_3",
+        "timetec_4",
+        "timetec_5",
+        "timetec_6"
+      ],
+      "promotion": ["(2017) Junior", "(2022) Senior", "(2024) Architect"],
+      "keyword": ["xamarin", "maui", "c#", ".net", "mobile", "cross platform", "android", "ios"]
+    },
+    {
+      "icon": "freelance.jpg",
+      "company": "Freelance",
+      "description": "description_freelance",
+      "position": "Web Developer",
+      "location": "Home",
+      "years": 0,
+      "months": 6,
+      "from": "2018-08-01",
+      "responsibility": ["freelance_1", "freelance_2"],
+      "promotion": ["N/A"],
+      "keyword": ["html", "css", "javascript", "bootstrap"]
+    }
+  ],
+  "expertise": ["dotnet", "csharp", "xaml"],
+  "skill": {
+    "advanced": ["xamarin", "maui", "c#", ".net"],
+    "foundation": ["html", "vue3", "primevue4", "tailwind4", "pinia"],
+    "familiar": ["java", "swift", "css", "js", "etc"],
+    "tools": ["visual studio", "vs code", "xcode", "github/gitlab", "postman"],
+    "ai": ["chatgpt", "copilot", "deepseek", "gemini"]
+  },
+  "language": {
+    "chinese": { "score": 4, "reading": 4.5, "listening": 4 },
+    "english": { "score": 3, "reading": 3.5, "listening": 3 },
+    "malay": { "score": 2, "reading": 2, "listening": 2 },
+    "hokkien": { "score": 4, "reading": null, "listening": 4 },
+    "cantonese": { "score": 2, "reading": 2, "listening": 3 }
+  },
+  "technical_skill": [
+    "research_and_curiosity",
+    "debugging",
+    "learning_ability",
+    "unlockable_potential"
+  ],
+  "achievement": [
+    {
+      "title": "GitHub Copilot - Accelerated App Development with AI Tools",
+      "link": "https://drive.usercontent.google.com/download?id=13tuUSQM3R2aCMlC_-lyDncD9jdyUXf8v&export=download",
+      "preview": "https://drive.google.com/file/d/13tuUSQM3R2aCMlC_-lyDncD9jdyUXf8v/preview"
+    },
+    {
+      "title": "ISO/IEC 27001:2022 Information Security Management",
+      "link": "https://drive.usercontent.google.com/download?id=1oYX6Vb8V0MEp587QmDThmhYlZME7_tQB&export=download",
+      "preview": "https://drive.google.com/file/d/1oYX6Vb8V0MEp587QmDThmhYlZME7_tQB/preview"
+    }
+  ]
+}
