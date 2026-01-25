@@ -10,7 +10,7 @@ export const useUserData = defineStore('userdata', () => {
   async function getResume() {
     try {
       const res = await axios.get(
-        'https://693ea10912c964ee6b6de8de.mockapi.io/api/v1/getresume/0502123',
+        'https://693ea10912c964ee6b6de8de.mockapi.io/api/v1/getresume/0502',
         { timeout: 5000 },
       )
       data.value = res.data
