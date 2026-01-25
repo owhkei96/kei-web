@@ -45,32 +45,33 @@ onMounted(() => {
 <template>
   <div class="flex flex-col gap-y-3 cz-padding-y">
     <Transition name="fade-only">
-      <div
-        v-if="show"
-        class="grid grid-cols-[auto_1fr_90px] md:grid-cols-[auto_1fr_100px] [@media(max-width:385px)]:grid-cols-[auto_1fr] gap-x-3 items-center mx-2 cz-print-hide"
-      >
-        <ImageView
-          :photo="props.apiData?.photo"
-          class="border-2 border-(--cz-title) hover-enlarge"
-        />
-        <div>
-          <label class="cz-title">{{ props.apiData?.name }}</label>
-          <label class="cz-highlight">{{ $t(props.apiData?.title) }}</label>
-          <label class="cz-hint-coding cz-print-only">
-            <a :href="props.apiData?.link"> {{ props.apiData?.link }} </a>
-          </label>
-        </div>
-
-        <Image
-          class="self-end hover-enlarge w-[90px] h-[90px] md:w-[100px] md:h-[100px] [@media(max-width:385px)]:hidden!"
-          :src="chibiSrc"
-          alt="chibi"
-          preview
+      <div v-if="show" class="cz-print-hide">
+        <div
+          class="grid grid-cols-[auto_1fr_90px] md:grid-cols-[auto_1fr_100px] [@media(max-width:385px)]:grid-cols-[auto_1fr] gap-x-3 items-center mx-2"
         >
-          <template #previewicon>
-            <i class="pi pi-arrow-up-right-and-arrow-down-left-from-center" />
-          </template>
-        </Image>
+          <ImageView
+            :photo="props.apiData?.photo"
+            class="border-2 border-(--cz-title) hover-enlarge"
+          />
+          <div>
+            <label class="cz-title">{{ props.apiData?.name }}</label>
+            <label class="cz-highlight">{{ $t(props.apiData?.title) }}</label>
+            <label class="cz-hint-coding cz-print-only">
+              <a :href="props.apiData?.link"> {{ props.apiData?.link }} </a>
+            </label>
+          </div>
+
+          <Image
+            class="self-end hover-enlarge w-[90px] h-[90px] md:w-[100px] md:h-[100px] [@media(max-width:385px)]:hidden!"
+            :src="chibiSrc"
+            alt="chibi"
+            preview
+          >
+            <template #previewicon>
+              <i class="pi pi-arrow-up-right-and-arrow-down-left-from-center" />
+            </template>
+          </Image>
+        </div>
       </div>
     </Transition>
 
